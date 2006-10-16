@@ -1,0 +1,44 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[a4paper]{article}
+% Include important math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+
+% Theorem definitions etc
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+% Useful command abbreviations
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\toinf}[1]{#1 \rightarrow \infty}
+\newcommand{\limtoinf}[1]{\lim_{\toinf{#1}}}
+
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rra}{\Rightarrow}
+\newcommand{\Ra}{\Longrightarrow}
+
+\begin{document}
+<++>
+\end{document}

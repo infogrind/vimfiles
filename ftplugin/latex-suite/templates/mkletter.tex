@@ -1,0 +1,26 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[12pt]{dinbrief}
+\address{Marius Kleiner\\
+Kapfstrasse 16\\
+8032 Z\"urich}
+\place{Z\"urich}
+\renewcommand{\enclname}{Beilage(n)}
+\begin{document}
+
+\begin{letter}{<+adressat+>\\[\medskipamount]
+  \textbf{<+plz ort+>}}
+  \subject{<+betreff+>}
+  \date{<+datum+>}
+  \nowindowrules
+  \addresshigh
+  \nowindowtics
+  \opening{<+andrede+>}
+  <+text+>
+  \closing[Marius Kleiner]{Mit freundlichen Gr\"ussen,}
+  \encl{<+beilagen+>}
+\end{letter}
+\end{document}
