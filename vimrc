@@ -46,6 +46,9 @@ set incsearch
 
 "" LaTeX Files
 
+" Set default "flavor" for tex files to tex (as opposed to plain tex)
+let g:tex_flavor = 'latex'
+
 " Set default LaTeX target to pdf, and set xpdf
 au FileType tex TTarget pdf
 "au FileType tex let g:Tex_ViewRuleComplete = '/sw/bin/xpdf $* &'
@@ -73,3 +76,7 @@ au FileType c set tabstop=8
 au FileType c set shiftwidth=8
 au FileType c set expandtab
 
+"" XML Files
+au FileType xml set tabstop=2
+au FileType xml set shiftwidth=2
+au FileType xml set expandtab
