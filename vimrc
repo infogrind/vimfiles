@@ -55,6 +55,9 @@ au FileType tex TTarget pdf
 au FileType tex let g:Tex_ViewRuleComplete = 'open -a TeXniscope $*'
 au FileType tex let g:Tex_ViewRule_pdf = 'open -a TeXniscope $*'
 au FileType tex let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+au FileType tex set tabstop=2
+au FileType tex set shiftwidth=2
+au FileType tex set expandtab
 
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse latex-suite. Set your grep

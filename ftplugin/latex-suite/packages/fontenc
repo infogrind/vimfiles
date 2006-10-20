@@ -1,0 +1,5 @@
+let g:TeX_package_option_fontenc =
+\ 'OT1,'
+\.'T1'
+
+" vim:ft=vim:ff=unix:
