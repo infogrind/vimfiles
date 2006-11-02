@@ -2,6 +2,17 @@
 " 2006-04-23 Marius Kleiner
 
 """""""""""""""""""""""""""""
+" Functions
+"""""""""""""""""""""""""""""
+
+" Set default indenting parameters
+function TabTwo()
+	set tabstop=2
+	set shiftwidth=2
+	set expandtab
+endfunction
+
+"""""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
 
@@ -21,9 +32,7 @@ set laststatus=2
 set backspace=2
 
 " Default indenting options
-"set tabstop=2
-"set shiftwidth=2
-"set expandtab
+call TabTwo()
 
 " Enable automatic save upon :make
 set autowrite
