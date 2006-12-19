@@ -89,6 +89,4 @@ au FileType c set shiftwidth=8
 au FileType c set expandtab
 
 "" XML Files
-au FileType xml set tabstop=2
-au FileType xml set shiftwidth=2
-au FileType xml set expandtab
+call TabTwo()
