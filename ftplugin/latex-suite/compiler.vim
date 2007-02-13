@@ -27,7 +27,13 @@ function! SetTeXCompilerTarget(type, target)
 	endif
 	if exists('g:Tex_'.a:type.'Rule_'.target)
 		if a:type == 'Compile'
-			let &l:makeprg = escape(g:Tex_CompileRule_{target}, g:Tex_EscapeChars)
+" Changes by Marius Kleiner 2007/02/13
+			if g:Tex_UseMakefile && (glob('makefile') != '' || glob('Makefile') != '')
+				let &l:makeprg = 'make $*'
+			else
+				let &l:makeprg = escape(g:Tex_CompileRule_{target}, g:Tex_EscapeChars)
+			endif
+" End of changes
 		elseif a:type == 'View'
 			exec 'let s:viewer = g:Tex_'.a:type.'Rule_'.target
 		endif
@@ -120,13 +126,13 @@ function! Tex_CompileLatex()
 	if g:Tex_UseMakefile && (glob('makefile') != '' || glob('Makefile') != '')
 		let _makeprg = &l:makeprg
 		let &l:makeprg = 'make $*'
-		if exists('s:target')
-			call Tex_Debug('Tex_CompileLatex: execing [make! '.s:target.']', 'comp')
-			exec 'make! '.s:target
-		else
+"		if exists('s:target')
+"			call Tex_Debug('Tex_CompileLatex: execing [make! '.s:target.']', 'comp')
+"			exec 'make! '.s:target
+"		else
 			call Tex_Debug('Tex_CompileLatex: execing [make!]', 'comp')
 			exec 'make!'
-		endif
+"		endif
 		let &l:makeprg = _makeprg
 	else
 		" If &makeprg has something like "$*.ps", it means that it wants the
