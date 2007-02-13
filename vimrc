@@ -59,11 +59,14 @@ set incsearch
 let g:tex_flavor = 'latex'
 
 " Set default LaTeX target to pdf, and set xpdf
-au FileType tex TTarget pdf
-"au FileType tex let g:Tex_ViewRuleComplete = '/sw/bin/xpdf $* &'
-au FileType tex let g:Tex_ViewRuleComplete = 'open -a TeXniscope $*'
-au FileType tex let g:Tex_ViewRule_pdf = 'open -a TeXniscope $*'
+au FileType tex let g:Tex_ViewRuleComplete = 'open -a PDFView $*'
+au FileType tex let g:Tex_ViewRule_pdf = 'open -a PDFView $*'
+"au FileType tex let g:Tex_ViewRuleComplete = 'open -a TeXniscope $*'
+"au FileType tex let g:Tex_ViewRule_pdf = 'open -a TeXniscope $*'
 au FileType tex let g:Tex_MultipleCompileFormats = 'dvi,pdf'
+" It is important to call TTarget here, since otherwise the variables
+" (re-)defined above won't be used!
+au FileType tex TTarget pdf
 au FileType tex set tabstop=2
 au FileType tex set shiftwidth=2
 au FileType tex set expandtab
