@@ -6,21 +6,27 @@
 %
 % $Id$
 %
-\documentclass[a4paper]{article}
+\documentclass[a4paper,draft]{article}
+
+\bibliographystyle{IEEEtran}
 
 % Include important math packages
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage{ifdraft}
+
+\ifdraft{
+\usepackage{fullpage}
+\renewcommand\baselinestretch{1.5}}{}
 
 % Theorem definitions etc
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
-
-\theoremstyle{definition}
 \newtheorem{definition}{Definition}
 \newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
 
 % Useful command abbreviations
 \newcommand{\ud}{\mathrm{d}}
@@ -42,6 +48,39 @@
 \newcommand{\ra}{\rightarrow}
 \newcommand{\rra}{\Rightarrow}
 \newcommand{\Ra}{\Longrightarrow}
+
+\newcommand\vect[1]{\mathbf{#1}}
+\newcommand\va{\vect a}
+\newcommand\vb{\vect b}
+\newcommand\vc{\vect c}
+\newcommand\vd{\vect d}
+\newcommand\ve{\vect e}
+\newcommand\vf{\vect f}
+\newcommand\vg{\vect g}
+\newcommand\vh{\vect h}
+\newcommand\vi{\vect i}
+\newcommand\vj{\vect j}
+\newcommand\vk{\vect k}
+\newcommand\vl{\vect l}
+\newcommand\vm{\vect m}
+\newcommand\vn{\vect n}
+\newcommand\vo{\vect o}
+\newcommand\vp{\vect p}
+\newcommand\vq{\vect q}
+\newcommand\vr{\vect r}
+\newcommand\vs{\vect s}
+\newcommand\vt{\vect t}
+\newcommand\vu{\vect u}
+\newcommand\vv{\vect v}
+\newcommand\vw{\vect w}
+\newcommand\vx{\vect x}
+\newcommand\vy{\vect y}
+\newcommand\vz{\vect z}
+
+\def\d{\mathrm d}
+
+\newcommand\ie{i.e.}
+\newcommand\eg{e.g.}
 
 \begin{document}
 <++>

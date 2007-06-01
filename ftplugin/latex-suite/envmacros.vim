@@ -564,7 +564,7 @@ function! Tex_PutEnvironment(env)
 			return IMAP_PutTextWithMovement(b:Tex_Env_{a:env})
 		elseif exists("g:Tex_Env_{'".a:env."'}")
 			return IMAP_PutTextWithMovement(g:Tex_Env_{a:env})
-		elseif a:env =~ 'equation*\|eqnarray*\|theorem\|lemma\|equation\|eqnarray\|align\*\|align\>\|multline'
+		elseif a:env =~ 'equation*\|eqnarray*\|theorem\|lemma\|equation\|eqnarray\|align\*\|align\>\|multline\|remark'
 			let g:aa = a:env
 			return Tex_eqnarray(a:env)
 		elseif a:env =~ "enumerate\\|itemize\\|theindex\\|trivlist"
