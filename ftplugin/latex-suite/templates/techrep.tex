@@ -1,0 +1,45 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%      Author: Marius Kleiner <marius.kleiner@epfl.ch>
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% $Id$
+%
+\documentclass[a4paper]{article}
+\bibliographystyle{IEEEtran}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{ifdraft}
+
+% Theorem definitions etc
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+
+\ifdraft{
+\usepackage{fullpage}
+\renewcommand\baselinestretch{1.5}}{}
+
+% Useful macros
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\ie}{i.e.}
+\newcommand{\eg}{e.g.}
+
+
+\title{<+title+>}
+\author{Marius Kleiner}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+<++>
+
+% Uncomment once you have added citations
+%\bibliography{mkbiblio}
+
+\end{document}
