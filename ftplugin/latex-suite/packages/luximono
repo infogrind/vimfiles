@@ -1,4 +1,6 @@
 let g:TeX_package_option_luximono =
 \ 'scaled'
 
+let g:TeX_package_luximono = ''
+
 " vim:ft=vim:ff=unix:
