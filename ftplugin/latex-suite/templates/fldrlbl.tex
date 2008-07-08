@@ -1,0 +1,33 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%      Author: Marius Kleiner <marius.kleiner@epfl.ch>
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% $Id: fldrlbl.tex 260 2007-06-13 13:55:37Z kleiner $
+%
+\documentclass[a4paper]{article}
+\usepackage{fldrlbl}
+
+% Set title for label here
+\def\thetitle{Title}
+
+\begin{document}
+% Folder large; horizontal text
+\begin{folderlabel}{14.5cm}{5.1cm}{\thetitle}
+\item Text
+\end{folderlabel}
+%
+% Folder medium; horizontal text
+\begin{folderlabel}{14.5cm}{2.8cm}{\thetitle}
+\item Text
+\end{folderlabel}
+
+% Folder large; vertical text
+\folderhigh{5.1cm}{14.5cm}{\thetitle}
+
+% Folder medium; vertical text
+\folderhigh{2.8cm}{14.5cm}{\thetitle}
+
+\end{document}
+
