@@ -50,6 +50,8 @@ filetype plugin on
 set incsearch
 
 " When editing a file, always jump to the last cursor position
+" (Suggestion: improve this so that svn-commit*.tmp files always open with the
+" cursor on the first line.)
 autocmd BufReadPost *
       \ if ! exists("g:leave_my_cursor_position_alone") |
       \     if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -92,6 +94,8 @@ filetype indent on
 " Insert skeleton
 autocmd BufNewFile *.html 0r ~/.vim/skeleton.html
 autocmd BufNewFile *.php 0r ~/.vim/skeleton.php
+autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
+autocmd BufNewFile *.mp 0r ~/.vim/skeleton.mp
 
 
 "" C Files

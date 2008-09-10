@@ -1,0 +1,7 @@
+let g:TeX_package_option_mtpro = 
+\ 'subscriptcorrection,'
+\.'nofontinfo'
+
+let g:TeX_package_mtpro = ''
+
+" vim:ft=vim:ff=unix:

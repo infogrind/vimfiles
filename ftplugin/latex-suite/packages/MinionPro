@@ -6,4 +6,6 @@ let g:TeX_package_option_MinionPro =
 \.'medfamily,'
 \.'fullfamily'
 
+let g:TeX_package_MinionPro = ''
+
 " vim:ft=vim:ff=unix:
