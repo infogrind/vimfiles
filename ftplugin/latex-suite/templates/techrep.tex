@@ -12,6 +12,10 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{ifdraft}
+\usepackage[font={small,sf},labelfont={bf,sf}]{caption}
+
+% Uncomment this if you use \includegraphics.
+%\usepackage[final]{graphicx}
 
 % Theorem definitions etc
 \newtheorem{theorem}{Theorem}
@@ -21,7 +25,9 @@
 % Draft settings
 \ifdraft{
 %\usepackage{fullpage}
-\usepackage{svninfo}
+\usepackage{datetime}
+\usdate
+\usepackage[nofancy,notoday]{svninfo}
 \svnInfo $Id$
 
 \usepackage{fancyhdr}
@@ -32,14 +38,17 @@
 \renewcommand{\footrulewidth}{.4pt}
 \lfoot{\footnotesize\sffamily\textbf{DRAFT}}
 \cfoot{\thepage}
-\rfoot{\footnotesize Version \svnInfoDate~\svnInfoTime}}
+\rfoot{\footnotesize Rev.~\svnInfoRevision, compiled {\mdyyyydate\today}
+\xxivtime}}
 \pagestyle{plain}
 \renewcommand\baselinestretch{1.5}{}}
 
 % Useful macros
 \newcommand{\ud}{\mathrm{d}}
-\newcommand{\vect}[1]{\mathbf{#1}}
-\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\vect}[1]{{\mathbf{#1}}}
+\newcommand{\mat}[1]{{\mathbf{#1}}}
+\newcommand{\mset}[1]{{\mathbb{#1}}}
+\newcommand{\E}{\mathbb{E}}
 \newcommand{\ie}{i.e.}
 \newcommand{\eg}{e.g.}
 

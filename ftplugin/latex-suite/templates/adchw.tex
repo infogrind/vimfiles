@@ -1,0 +1,30 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%      Author: Marius Kleiner <marius.kleiner@epfl.ch>
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% $Id$
+%
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+\usepackage{../adchomework}
+
+
+\begin{document}
+
+\homeworksheet{<+HW-No+>}{<+Handout-No+>}{<+Date+>}{<+Due date+>}
+
+\begin{exercise}[<+optional title+>]
+  <++>
+\end{exercise}
+
+
+\end{document}
+
+

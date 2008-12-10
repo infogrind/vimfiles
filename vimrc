@@ -16,6 +16,10 @@ endfunction
 " Default options
 """""""""""""""""""""""""""""
 
+" Enable reading of first line for modelines
+set modeline
+set modelines=1
+
 " Always display row and column number
 set ruler
 
@@ -69,10 +73,12 @@ autocmd BufReadPost *
 let g:tex_flavor = 'latex'
 
 " Set default LaTeX target to pdf, and set xpdf
-au FileType tex let g:Tex_ViewRuleComplete = 'open -a PDFView $*'
-au FileType tex let g:Tex_ViewRule_pdf = 'open -a PDFView $*'
-"au FileType tex let g:Tex_ViewRuleComplete = 'open -a TeXniscope $*'
-"au FileType tex let g:Tex_ViewRule_pdf = 'open -a TeXniscope $*'
+au FileType tex let g:Tex_ViewRuleComplete = 'open $*'
+au FileType tex let g:Tex_ViewRule_pdf = 'open $*'
+"au FileType tex let g:Tex_ViewRuleComplete = 'open -a PDFView $*'
+"au FileType tex let g:Tex_ViewRule_pdf = 'open -a PDFView $*'
+"au FileType tex let g:Tex_ViewRuleComplete = 'open -a Skim $*'
+"au FileType tex let g:Tex_ViewRule_pdf = 'open -a Skim $*'
 au FileType tex let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 " It is important to call TTarget here, since otherwise the variables
 " (re-)defined above won't be used!
