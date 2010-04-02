@@ -12,6 +12,12 @@ function TabTwo()
 	set expandtab
 endfunction
 
+function TabFour()
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
+endfunction
+
 """""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
@@ -102,6 +108,7 @@ autocmd BufNewFile *.html 0r ~/.vim/skeleton.html
 autocmd BufNewFile *.php 0r ~/.vim/skeleton.php
 autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
 autocmd BufNewFile *.mp 0r ~/.vim/skeleton.mp
+autocmd BufNewFile *.py 0r ~/.vim/skeleton.py
 
 
 "" C Files
@@ -111,3 +118,6 @@ au FileType c set expandtab
 
 "" XML Files
 call TabTwo()
+
+"" Python: Default tab length is 4
+call TabFour()

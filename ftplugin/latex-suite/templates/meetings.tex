@@ -1,3 +1,11 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%      Author: Marius Kleiner <marius.kleiner@epfl.ch>
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+% $Id$
+%
 \documentclass[a4paper]{article}
 \bibliographystyle{IEEEtran}
 \usepackage[font={small,sf},labelfont={bf,sf}]{caption}
@@ -42,9 +50,9 @@
 \frenchspacing
 
 
-\title{Weekly Meeting With Bixio}
+\title{Weekly Notes}
 \author{Marius Kleiner}
-\date{<+date+>}
+\date{<+date+>\\\small(last updated: \today)}
 
 \begin{document}
 \maketitle
