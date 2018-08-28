@@ -61,6 +61,10 @@ set grepprg=grep\ -nH\ $*
 " OPTIONAL: This enables automatic indentation as you type.
 filetype indent on
 
+" This tells vim's detection algorithm for *.tex files to default to latex (see
+" the function dist#ft#FTtex() in autoload/dist/ft.vim under share/vim/...).
+let g:tex_flavor = 'latex'
+
 "" HTML Files
 
 " Insert skeleton
