@@ -5,10 +5,6 @@
 " Default options
 """""""""""""""""""""""""""""
 
-" Enable reading of first line for modelines
-set modeline
-set modelines=1
-
 " Always display row and column number
 set ruler
 
