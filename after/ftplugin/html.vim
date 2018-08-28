@@ -5,5 +5,5 @@
 " explanation: https://stackoverflow.com/a/23496504/319282.)
 "
 if !filereadable(expand('%'))
-    0r ~/.vim/skeleton.html
+    0r ~/.vim/templates/skeleton.html
 endif
