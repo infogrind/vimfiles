@@ -1,0 +1,74 @@
+"
+" $Id: vimrc 913 2013-08-29 09:14:29Z raimund $
+"
+" this file is part of .adnhome and globally administrated
+"
+"
+
+" adnovum tab width
+set tabstop=4
+set shiftwidth=4
+
+" indention helper
+set autoindent
+set smartindent
+if has("autocmd")
+	filetype plugin indent on
+	" disable auto text wrap in changelog files
+	au BufNewFile,BufRead [cC]hange[lL]og setlocal textwidth=0
+endif
+
+" put all swap files in my home dir, create dir first
+if !isdirectory(expand("~/.vim/swapfiles"))
+	if exists("*mkdir")
+		call mkdir(expand("~/.vim/swapfiles"), "p")
+	else
+		silent !mkdir -p ~/.vim/swapfiles
+	endif
+endif
+set dir=~/.vim/swapfiles
+
+" fix backspace on solaris
+if (&term == "xterm") || (&term == "dtterm")
+	" <ctrl-V><backspace>
+	set t_kb=
+	set t_kD=[3~
+endif
+
+" security setting, otherwise malicious files can to harmful things.
+set modelines=0
+
+" more natural backspacing
+set backspace=indent,eol,start
+
+" enable syntax highlightning if available
+if has("syntax")
+  syntax on
+endif
+
+" show cursor line and column in the status line
+set ruler
+
+" show matching brackets
+set showmatch
+
+" enhanced status bar
+set showmode
+set showcmd                                              
+
+" search is only case sensitive if at least one upper case character is used,
+" otherwise it is case insensitive
+set smartcase
+set ignorecase
+set hlsearch
+
+" use bash-like autocompletion
+set wildmode=longest,list
+
+" options for gvim
+if has ("gui_running")
+
+	" mouse support
+	set mouse=a
+
+endif
