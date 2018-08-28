@@ -73,3 +73,12 @@ autocmd BufNewFile *.pl 0r ~/.vim/templates/skeleton.pl
 autocmd BufNewFile *.mp 0r ~/.vim/templates/skeleton.mp
 autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
+
+" Plugin section; see https://github.com/junegunn/vim-plug/blob/master/README.md
+
+call plug#begin('~/.vim/plugged')
+
+" latex-suite
+Plug 'vim-latex/vim-latex', { 'for' : 'tex' }
+
+call plug#end()
