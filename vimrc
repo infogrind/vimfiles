@@ -2,23 +2,6 @@
 " 2006-04-23 Marius Kleiner
 
 """""""""""""""""""""""""""""
-" Functions
-"""""""""""""""""""""""""""""
-
-" Set default indenting parameters
-function TabTwo()
-	set tabstop=2
-	set shiftwidth=2
-	set expandtab
-endfunction
-
-function TabFour()
-	set tabstop=4
-	set shiftwidth=4
-	set expandtab
-endfunction
-
-"""""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
 
@@ -40,9 +23,6 @@ set laststatus=2
 
 " Enable all backspace options
 set backspace=2
-
-" Default indenting options
-call TabTwo()
 
 " Enable automatic save upon :make
 set autowrite
@@ -110,15 +90,3 @@ autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
 autocmd BufNewFile *.mp 0r ~/.vim/skeleton.mp
 autocmd BufNewFile *.py 0r ~/.vim/skeleton.py
 autocmd BufNewFile *.rb 0r ~/.vim/skeleton.rb
-
-
-"" C Files
-au FileType c set tabstop=8
-au FileType c set shiftwidth=8
-au FileType c set expandtab
-
-"" XML Files
-call TabTwo()
-
-"" Python: Default tab length is 4
-call TabFour()
