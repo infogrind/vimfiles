@@ -11,10 +11,11 @@ set ruler
 " Set background to dark
 set background=dark
 
-" Default textwidth: 80 cols
+" Default textwidth: 80 cols (this can be overwritten by filetype-specific
+" ftplugin files).
 set textwidth=80
 
-" Always show status line
+" Always show status line (alternatives: 0 = never, 1 = only if >= 2 windows)
 set laststatus=2
 
 " Enable all backspace options
