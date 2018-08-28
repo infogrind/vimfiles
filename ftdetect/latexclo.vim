@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.clo set filetype=tex
+au BufRead,BufNewFile *.clo setf tex
