@@ -24,8 +24,9 @@ set backspace=indent,eol,start
 " Enable automatic save upon :make
 set autowrite
 
-" Set wildcard mode to bash-like
+" Set wildcard mode to bash-like and show options in menu
 set wildmode=longest,full
+set wildmenu
 
 " Enable colors
 syntax enable
