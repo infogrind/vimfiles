@@ -84,7 +84,6 @@ filetype indent on
 "" HTML Files
 
 " Insert skeleton
-autocmd BufNewFile *.html 0r ~/.vim/skeleton.html
 autocmd BufNewFile *.php 0r ~/.vim/skeleton.php
 autocmd BufNewFile *.pl 0r ~/.vim/skeleton.pl
 autocmd BufNewFile *.mp 0r ~/.vim/skeleton.mp
