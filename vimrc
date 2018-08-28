@@ -5,9 +5,11 @@
 """""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
+" We start by sourcing defaults.vim, this way there is no need to reinvent the
+" wheel. Afterwards we only need to change that which isn't already set in the
+" defaults.
+runtime defaults.vim
 
-" Always display row and column number
-set ruler
 
 " Set background to dark
 set background=dark
@@ -19,34 +21,11 @@ set textwidth=80
 " Always show status line (alternatives: 0 = never, 1 = only if >= 2 windows)
 set laststatus=2
 
-" Enable all backspace options
-set backspace=indent,eol,start
-
 " Enable automatic save upon :make
 set autowrite
 
 " Set wildcard mode to bash-like and show options in menu
 set wildmode=longest,full
-set wildmenu
-
-" Enable colors
-syntax enable
-
-" REQUIRED. This makes vim invoke latex-suite when you open a tex file.
-filetype plugin on
-
-" Activate incremental search
-set incsearch
-
-" When editing a file, always jump to the last cursor position
-" (Suggestion: improve this so that svn-commit*.tmp files always open with the
-" cursor on the first line.)
-autocmd BufReadPost *
-      \ if ! exists("g:leave_my_cursor_position_alone") |
-      \     if line("'\"") > 0 && line ("'\"") <= line("$") |
-      \         exe "normal g'\"" |
-      \     endif |
-      \ endif
 
 """""""""""""""""""""""""""""
 " Filetype specific options
@@ -56,9 +35,6 @@ autocmd BufReadPost *
 " search in a singe file. This will confuse latex-suite. Set your grep
 " program to alway generate a file-name.
 set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
 
 " This tells vim's detection algorithm for *.tex files to default to latex (see
 " the function dist#ft#FTtex() in autoload/dist/ft.vim under share/vim/...).
