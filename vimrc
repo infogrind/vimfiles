@@ -22,7 +22,7 @@ set textwidth=80
 set laststatus=2
 
 " Enable all backspace options
-set backspace=2
+set backspace=indent,eol,start
 
 " Enable automatic save upon :make
 set autowrite
