@@ -1,5 +1,6 @@
 " .vimrc File
-" 2006-04-23 Marius Kleiner
+" Marius Kleiner
+" <kleiner@gmail.com>
 
 """""""""""""""""""""""""""""
 " Default options
