@@ -48,3 +48,4 @@ autocmd BufNewFile *.pl 0r ~/.vim/templates/skeleton.pl
 autocmd BufNewFile *.mp 0r ~/.vim/templates/skeleton.mp
 autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
+autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
