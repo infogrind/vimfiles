@@ -10,6 +10,9 @@
 " defaults.
 runtime defaults.vim
 
+" Disable mouse options - I prefer to use the mouse for OS specific things like
+" OS level copy/paste.
+set mouse=
 
 " Set background to dark
 set background=dark
