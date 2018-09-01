@@ -74,3 +74,26 @@ autocmd BufNewFile *.mp 0r ~/.vim/templates/skeleton.mp
 autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
 autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
 autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin section; see
+" https://github.com/junegunn/vim-plug/blob/master/README.md
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin('~/.vim/plugged')
+
+" latex-suite
+Plug 'vim-latex/vim-latex', { 'for' : 'tex' }
+Plug 'JamshedVesuna/vim-markdown-preview', { 'for' : 'markdown' }
+
+call plug#end()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin specific configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Options for vim-markdown-preview
+" See https://github.com/JamshedVesuna/vim-markdown-preview#options
+let vim_markdown_preview_github=1   " use grip to use github-type markdown
+let vim_markdown_preview_browser='Google Chrome'
