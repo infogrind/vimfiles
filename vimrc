@@ -85,6 +85,8 @@ call plug#begin('~/.vim/plugged')
 " latex-suite
 Plug 'vim-latex/vim-latex', { 'for' : 'tex' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for' : 'markdown' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
