@@ -14,9 +14,6 @@ runtime defaults.vim
 " OS level copy/paste.
 set mouse=
 
-" Set background to dark
-set background=dark
-
 " Default textwidth: 80 cols (this can be overwritten by filetype-specific
 " ftplugin files).
 set textwidth=80
@@ -29,6 +26,31 @@ set autowrite
 
 " Set wildcard mode to bash-like and show options in menu
 set wildmode=longest,full
+
+"""""""""""""""""""""""""""""""
+" Display of special characters
+"""""""""""""""""""""""""""""""
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" Source: http://vimcasts.org/episodes/show-invisibles/
+
+""""""""""""""""""""""""""""""
+" Color options
+""""""""""""""""""""""""""""""
+
+" Start with defaults
+colorscheme default
+
+" I prefer light colors
+set background=dark
+
+" And apply my own modifications (see colors/marius/vim)
+colorscheme marius
 
 """""""""""""""""""""""""""""
 " Filetype specific options
