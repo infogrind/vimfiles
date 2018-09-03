@@ -12,9 +12,11 @@ endif
 "Clear the colors for any items that you don't like
 hi clear SpecialKey
 hi clear NonText
+hi clear LineNr
 
 " Set up new & improved colors
 " To figure out how to determine the color numbers, see
 " https://askubuntu.com/a/821163
 hi SpecialKey ctermfg=darkgrey
 hi NonText ctermfg=darkgrey
+hi LineNr ctermfg=darkgrey
