@@ -49,7 +49,7 @@ colorscheme default
 " I prefer light colors
 set background=dark
 
-" And apply my own modifications (see colors/marius/vim)
+" And apply my own modifications (see colors/marius.vim)
 colorscheme marius
 
 """""""""""""""""""""""""""""
