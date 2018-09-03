@@ -40,6 +40,13 @@ set listchars=tab:▸\ ,eol:¬
 " Source: http://vimcasts.org/episodes/show-invisibles/
 
 """"""""""""""""""""""""""""""
+" Various keyboard shortcuts
+""""""""""""""""""""""""""""""
+
+" Line numbering
+nmap <leader>n :set nu!<CR>
+
+""""""""""""""""""""""""""""""
 " Color options
 """"""""""""""""""""""""""""""
 
