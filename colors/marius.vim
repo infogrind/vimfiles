@@ -16,5 +16,5 @@ hi clear NonText
 " Set up new & improved colors
 " To figure out how to determine the color numbers, see
 " https://askubuntu.com/a/821163
-hi SpecialKey ctermfg=232
-hi NonText ctermfg=232
+hi SpecialKey ctermfg=darkgrey
+hi NonText ctermfg=darkgrey
