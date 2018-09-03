@@ -94,6 +94,7 @@ Plug 'vim-latex/vim-latex', { 'for' : 'tex' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for' : 'markdown' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'w0rp/ale', { 'for' : 'python' }
 
 call plug#end()
 
