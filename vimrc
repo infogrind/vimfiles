@@ -43,6 +43,12 @@ set listchars=tab:▸\ ,eol:¬
 
 " Source: http://vimcasts.org/episodes/show-invisibles/
 
+"""""""""""""""""""""""""""""""
+" Custom key mappings
+"""""""""""""""""""""""""""""""
+" Easy editing of vimrc
+nnoremap <leader>ev :split $HOME/.vim/vimrc<cr>
+
 """"""""""""""""""""""""""""""
 " Various keyboard shortcuts
 """"""""""""""""""""""""""""""
