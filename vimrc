@@ -27,6 +27,10 @@ set autowrite
 " Set wildcard mode to bash-like and show options in menu
 set wildmode=longest,full
 
+" As we use the lightline plugin (see below), there is no need to show the mode
+" again in the last line (see also https://github.com/itchyny/lightline.vim).
+set noshowmode
+
 """""""""""""""""""""""""""""""
 " Display of special characters
 """""""""""""""""""""""""""""""
@@ -95,6 +99,8 @@ Plug 'JamshedVesuna/vim-markdown-preview', { 'for' : 'markdown' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale', { 'for' : 'python' }
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -107,3 +113,16 @@ call plug#end()
 " See https://github.com/JamshedVesuna/vim-markdown-preview#options
 let vim_markdown_preview_github=1   " use grip to use github-type markdown
 let vim_markdown_preview_browser='Google Chrome'
+
+" Options for lightline (displaying the git branch requires also the fugitive
+" plugin)
+let g:lightline = {
+			\ 'colorscheme': 'wombat',
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ],
+			\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+			\ },
+			\ 'component_function': {
+			\   'gitbranch': 'fugitive#head'
+			\ },
+			\}
