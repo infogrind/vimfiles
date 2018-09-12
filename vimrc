@@ -49,6 +49,9 @@ set listchars=tab:▸\ ,eol:¬
 " Easy editing of vimrc
 nnoremap <leader>ev :split $HOME/.vim/vimrc<cr>
 
+" Show whitespace as error (turn off again with ':match' without args)
+nnoremap <leader>w :match Error /\v[ \t]+$/<cr>
+
 """"""""""""""""""""""""""""""
 " Various keyboard shortcuts
 """"""""""""""""""""""""""""""
