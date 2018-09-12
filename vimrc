@@ -52,6 +52,9 @@ nnoremap <leader>ev :split $HOME/.vim/vimrc<cr>
 " Show whitespace as error (turn off again with ':match' without args)
 nnoremap <leader>w :match Error /\v[ \t]+$/<cr>
 
+" Turn off matches (see previous map)
+nnoremap <leader>W :match none<cr>
+
 """"""""""""""""""""""""""""""
 " Various keyboard shortcuts
 """"""""""""""""""""""""""""""
