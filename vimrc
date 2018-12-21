@@ -3,6 +3,20 @@
 " <kleiner@gmail.com>
 
 """""""""""""""""""""""""""""
+" Helper Functions used below
+"""""""""""""""""""""""""""""
+
+" Function to source only if file exists {
+" Source: https://devel.tech/snippets/n/vIIMz8vZ/load-vim-source-files-only-if-they-exist/
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
+
+
+"""""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
 " We start by sourcing defaults.vim, this way there is no need to reinvent the
@@ -100,6 +114,11 @@ augroup au_marius
 	autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
 	autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
 augroup end
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run local file if present
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call SourceIfExists("~/.vimrc.local")
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin section; see
