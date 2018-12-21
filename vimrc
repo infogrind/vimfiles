@@ -2,6 +2,10 @@
 " Marius Kleiner
 " <kleiner@gmail.com>
 
+" Make sure vim understands the non-ASCII characters that follow below.
+set encoding=utf-8
+scriptencoding utf-8
+
 """""""""""""""""""""""""""""
 " Helper Functions used below
 """""""""""""""""""""""""""""
