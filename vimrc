@@ -110,6 +110,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale', { 'for' : 'python' }
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
