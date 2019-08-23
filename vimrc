@@ -2,6 +2,24 @@
 " Marius Kleiner
 " <kleiner@gmail.com>
 
+" Make sure vim understands the non-ASCII characters that follow below.
+set encoding=utf-8
+scriptencoding utf-8
+
+"""""""""""""""""""""""""""""
+" Helper Functions used below
+"""""""""""""""""""""""""""""
+
+" Function to source only if file exists {
+" Source: https://devel.tech/snippets/n/vIIMz8vZ/load-vim-source-files-only-if-they-exist/
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
+
+
 """""""""""""""""""""""""""""
 " Default options
 """""""""""""""""""""""""""""
@@ -49,6 +67,12 @@ set listchars=tab:▸\ ,eol:¬
 " Easy editing of vimrc
 nnoremap <leader>ev :split $HOME/.vim/vimrc<cr>
 
+" Show whitespace as error (turn off again with ':match' without args)
+nnoremap <leader>w :match Error /\v[ \t]+$/<cr>
+
+" Turn off matches (see previous map)
+nnoremap <leader>W :match none<cr>
+
 """"""""""""""""""""""""""""""
 " Various keyboard shortcuts
 """"""""""""""""""""""""""""""
@@ -94,6 +118,11 @@ augroup au_marius
 	autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
 	autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
 augroup end
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run local file if present
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call SourceIfExists("~/.vimrc.local")
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin section; see
