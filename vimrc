@@ -136,7 +136,8 @@ Plug 'vim-latex/vim-latex', { 'for' : 'tex' }
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for' : 'markdown' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale', { 'for' : 'python' }
+" 2019/08/25 Disabling the following, as it is more annoying than helpful.
+"Plug 'w0rp/ale', { 'for' : 'python' }
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
