@@ -141,6 +141,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
+" 2019/12/14: toml (Rust Cargo) plugin
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
