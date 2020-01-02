@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import sys
 import getopt
@@ -11,14 +11,14 @@ output = "-"
 def main():
   args = parse_options(sys.argv[1:])
 
-  print "Output: ", output
+  print("Output: ", output)
   debug("If you see this, verbose mode is enabled.")
 
   # Complete the program here. Enjoy!
 
 
 def usage():
-  print """Usage: <syntax goes here>
+  print("""Usage: <syntax goes here>
 
   <description goes here>
 
@@ -26,7 +26,7 @@ def usage():
   -h        Show this help text.
   -v        Display verbose output.
   -o <file> Write output to <file> or to stdout if <file> is '-'.
-  """
+  """)
 
 
 def parse_options(args):
@@ -38,8 +38,8 @@ def parse_options(args):
   # be parsed.
   try:
     opts, args = getopt.getopt(args, "o:hv")
-  except getopt.GetoptError, err:
-    print str(err)
+  except getopt.GetoptError as err:
+    print(str(err))
     usage()
     sys.exit(2)
 
@@ -69,3 +69,4 @@ def debug(s):
 # called directly.
 if __name__ == "__main__":
   main()
+
