@@ -143,6 +143,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 " 2019/12/14: toml (Rust Cargo) plugin
 Plug 'cespare/vim-toml'
+" 2021/07/08 vim-fish integration for fish shell
+Plug 'dag/vim-fish'
 
 call plug#end()
 
